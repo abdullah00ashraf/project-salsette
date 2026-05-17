@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Salsette | The Konkan-Aegis Protocol</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        charcoal: '#1A1A1A',
+                        'tech-blue': '#00d2ff',
+                        brand: '#e53935',
+                        infl: {
+                            yellow: '#EED747',
+                            purple: '#927CFA',
+                            teal: '#5FB5A1',
+                            darkPurple: '#8C52FF',
+                            gray: '#F3F4F6'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased font-sans text-charcoal bg-[#FAFAFA] overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <!-- Persistent WebGL Context -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="relative z-10 scroll-container">
+
+        <!-- Section 1: Hero -->
+        <section class="min-h-screen flex flex-col justify-center px-6 py-24 max-w-7xl mx-auto" id="hero">
+            <div class="space-y-4 text-center gsap-reveal">
+                <span class="font-serif italic font-light text-3xl lg:text-4xl text-neutral-500 tracking-wide block">
+                    Advanced fluid dynamics via
+                </span>
+                <h1
+                    class="font-sans font-bold uppercase tracking-tighter text-6xl md:text-8xl lg:text-9xl text-neutral-900 leading-[0.85]">
+                    PROJECT<br />
+                    <span class="text-neutral-400">SALSETTE</span>
+                </h1>
+                <p class="mt-8 mx-auto max-w-2xl text-neutral-500 text-lg lg:text-xl font-medium tracking-tight">
+                    A physics-informed Bi-LSTM neural network managing Mumbai's hydraulic lock drainage paradox.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Abstract -->
+        <section class="py-32 px-6 max-w-7xl mx-auto" id="abstract">
+            <div class="space-y-12">
+                <h2
+                    class="gsap-reveal font-sans font-bold uppercase tracking-tighter text-4xl md:text-6xl text-charcoal leading-none">
+                    THE PREDICTION<br /><span class="text-neutral-400">PARADOX</span>
+                </h2>
+                <div class="gsap-reveal bg-white rounded-[40px] p-10 md:p-16 shadow-sm border border-neutral-100">
+                    <p class="text-2xl md:text-4xl font-light leading-snug tracking-tight text-neutral-800">
+                        Traditional deep learning models fail under the chaotic pressure of Mumbai's monsoon-tide
+                        concurrency. Project Salsette introduces the <span class="font-bold text-infl-purple">"Physical
+                            Cage"</span>—a Partial Differential Equation (PDE) Loss function that strictly restrains the
+                        AI's predictive outputs within the boundaries of real-world fluid dynamics.
+                    </p>
+                    <div class="mt-12 flex items-center justify-between pt-8 border-t border-neutral-100">
+                        <span
+                            class="text-neutral-400 font-mono tracking-widest text-lg hidden md:inline-block">————→</span>
+                        <button
+                            class="bg-black text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-neutral-800 transition duration-300 shadow-md">
+                            Eliminate Hallucinations
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: The Konkan-Aegis Framework -->
+        <section class="py-32 px-6 max-w-7xl mx-auto" id="framework">
+            <div class="space-y-16">
+
+                <!-- Header & Abstract -->
+                <div class="space-y-6 gsap-reveal reveal-text">
+                    <h2
+                        class="font-sans font-bold uppercase tracking-[0.2em] text-sm text-neutral-400 flex items-center gap-6">
+                        ARCHITECTURAL SPECIFICATION
+                        <div class="h-px w-16 bg-neutral-300"></div>
+                    </h2>
+                    <h3
+                        class="font-sans font-bold uppercase tracking-tighter text-4xl md:text-6xl text-charcoal leading-none">
+                        THE KONKAN-AEGIS <span class="text-neutral-400">FRAMEWORK</span>
+                    </h3>
+                    <p class="font-sans text-lg md:text-xl text-neutral-600 max-w-4xl leading-relaxed mt-6">
+                        The Konkan-Aegis protocol explicitly abandons the opaque vulnerabilities of traditional
+                        black-box AI in favor of a resilient hybrid architecture. By inextricably merging deep
+                        time-series learning with the immutable, hard-coded laws of hydrodynamics, the system achieves
+                        unprecedented predictive accuracy and operational transparency.
+                    </p>
+                </div>
+
+                <!-- 3-Pillar Architecture Grid (Flip Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-[1000px]">
+
+                    <!-- Pillar 1: Temporal Neural Matrix -->
+                    <div class="flip-card flip-left min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(-180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <div class="flex justify-between items-start mb-8">
+                                    <span
+                                        class="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal font-bold tracking-widest text-xs">01</span>
+                                    <span
+                                        class="font-mono text-xs font-semibold bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full uppercase tracking-widest">Bi-LSTM
+                                        Core</span>
+                                </div>
+                                <h4 class="font-sans font-bold text-2xl text-charcoal uppercase tracking-tight mb-4">
+                                    Temporal Neural Matrix</h4>
+                                <p class="font-sans text-neutral-600 leading-relaxed flex-grow">
+                                    The intelligence core leverages a Bidirectional Long Short-Term Memory network to
+                                    map complex sequential flood patterns. It autonomously ingests a strictly formatted
+                                    <span
+                                        class="font-mono bg-neutral-100 text-charcoal px-1 py-0.5 rounded text-sm">[24,
+                                        8]</span> tensor, representing a continuous 24-hour predictive horizon across 8
+                                    distinct live telemetry variables.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    System Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Tensor
+                                            Shape</span>
+                                        <span class="text-white/90">[null, 24, 8] (24h horizon, 8 features)</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Optimizer
+                                            Core</span>
+                                        <span class="text-white/90">AdamW + Gradient Clipping</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Latency
+                                            Strategy</span>
+                                        <span class="text-white/90">Batch size 1 enforced for edge predictability</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: The Physical Cage (PDE Loss) -->
+                    <div class="flip-card flip-top min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <div class="flex justify-between items-start mb-8">
+                                    <span
+                                        class="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal font-bold tracking-widest text-xs">02</span>
+                                    <span
+                                        class="font-mono text-xs font-semibold bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full uppercase tracking-widest">SentinelPhysics</span>
+                                </div>
+                                <h4 class="font-sans font-bold text-2xl text-charcoal uppercase tracking-tight mb-4">The
+                                    Physical Cage</h4>
+                                <p class="font-sans text-neutral-600 leading-relaxed flex-grow">
+                                    Deploying the custom <span
+                                        class="font-mono bg-neutral-100 text-charcoal px-1 py-0.5 rounded text-sm">SentinelPhysicsModel</span>,
+                                    Partial Differential Equations governing shallow-water dynamics are mathematically
+                                    baked directly into the loss function. This rigidly restrains the neural network,
+                                    preventing it from ever hallucinating impossible or non-physical water movements.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(-180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    System Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Constraint
+                                            Logic</span>
+                                        <span class="text-white/90">PDE Loss Function (Shallow-water dynamics)</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Ingestion
+                                            Shield</span>
+                                        <span class="text-white/90">Traps NaN propagation pre-matrix</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Validation</span>
+                                        <span class="text-white/90">Hard bounds reject unphysical sensor spikes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: XLA Edge Compilation -->
+                    <div class="flip-card flip-right min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <div class="flex justify-between items-start mb-8">
+                                    <span
+                                        class="w-12 h-12 rounded-full border border-charcoal/20 flex items-center justify-center text-charcoal font-bold tracking-widest text-xs">03</span>
+                                    <span
+                                        class="font-mono text-xs font-semibold bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full uppercase tracking-widest">JIT
+                                        / INT8</span>
+                                </div>
+                                <h4 class="font-sans font-bold text-2xl text-charcoal uppercase tracking-tight mb-4">XLA
+                                    Edge Compilation</h4>
+                                <p class="font-sans text-neutral-600 leading-relaxed flex-grow">
+                                    Built for extreme deployment, the system utilizes Just-In-Time (JIT) compilation and
+                                    aggressive INT8 quantization. By stripping away heavy Python execution overhead, the
+                                    neural brain runs flawlessly on low-power, blackout-resilient local hardware
+                                    stationed directly at the municipal choke points.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(-180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    System Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Precision</span>
+                                        <span class="text-white/90">Quantized from float32 to INT8</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Execution</span>
+                                        <span class="text-white/90">JIT compilation strips Python runtime
+                                            overhead</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Resilience</span>
+                                        <span class="text-white/90">Engineered for battery-backed edge execution</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Telemetry UI (The Tri-Color Showcase) -->
+        <section class="py-32 px-6 max-w-7xl mx-auto" id="telemetry">
+            <h2
+                class="gsap-reveal font-sans font-bold uppercase tracking-tighter text-4xl md:text-6xl text-charcoal leading-none mb-16 text-center">
+                LIVE <span class="text-neutral-400">TELEMETRY</span>
+            </h2>
+
+            <!-- LIVE TELEMETRY 8-CARD GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
+
+                <!-- Card 1: Temperature -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Current
+                        Temperature</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-temp">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">°C</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Precipitation -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span
+                        class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Precipitation
+                        Rate</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-precip">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">mm/h</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Surface Pressure -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Surface
+                        Pressure</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-pressure">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">hPa</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Wind Speed -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Wind
+                        Speed</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-wind">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">km/h</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Soil Moisture (Simulated) -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Soil
+                        Moisture</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-soil">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">m³/m³</span>
+                    </div>
+                </div>
+
+                <!-- Card 6: Surface Runoff (Simulated) -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Surface
+                        Runoff</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-runoff">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">mm</span>
+                    </div>
+                </div>
+
+                <!-- Card 7: Relative Humidity -->
+                <div class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Relative
+                        Humidity</span>
+                    <div class="mt-6 flex items-baseline gap-2">
+                        <span class="text-5xl font-light tracking-tight font-mono text-charcoal"
+                            id="live-humidity">--</span>
+                        <span class="text-sm text-tech-blue font-medium font-sans">%</span>
+                    </div>
+                </div>
+
+                <!-- Card 8: Core Engine Status (Isolated/Hardcoded) -->
+                <div
+                    class="showcase-glass-panel p-8 flex flex-col justify-between min-h-[180px] border border-tech-blue/20 bg-white/80 gsap-reveal">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-neutral-500 uppercase font-sans">Core
+                        Engine Status</span>
+                    <div class="mt-6 flex flex-col gap-3">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse-slow"></span>
+                            <span
+                                class="text-xs font-bold tracking-[0.2em] uppercase font-sans text-charcoal">ONLINE</span>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight font-mono text-charcoal">INT8 QUANTIZED</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- Section: Infrastructure Security & Protection -->
+        <section class="py-32 px-6 max-w-7xl mx-auto" id="security">
+            <div class="space-y-16">
+
+                <!-- Header & Abstract -->
+                <div class="text-center space-y-6 gsap-reveal reveal-text">
+                    <h2
+                        class="font-sans font-bold uppercase tracking-tighter text-4xl md:text-6xl text-charcoal leading-none">
+                        INFRASTRUCTURE <br class="md:hidden" /><span class="text-neutral-400">SECURITY &
+                            PROTECTION</span>
+                    </h2>
+                    <p class="font-sans text-lg md:text-xl text-neutral-500 max-w-4xl mx-auto leading-relaxed">
+                        Project Salsette operates on a strict zero-trust architecture, coupling on-device edge
+                        computation with immutable physics-based restraints. This mathematically guaranteed containment
+                        strategy ensures absolute predictive supremacy without ever compromising municipal data
+                        integrity or exposing critical infrastructure to adversarial exploitation.
+                    </p>
+                </div>
+
+                <!-- 3-Pillar Security Grid (Flip Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-[1000px]">
+
+                    <!-- Card 1: Edge Execution -->
+                    <div class="flip-card flip-left min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(-180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col justify-start absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <span
+                                    class="text-xs font-bold tracking-widest text-tech-blue uppercase font-sans mb-6">Pillar
+                                    01</span>
+                                <h3 class="font-sans font-bold text-2xl text-charcoal tracking-tight leading-snug mb-4">
+                                    Zero-Trust Edge Execution</h3>
+                                <p class="font-sans text-neutral-600 leading-relaxed font-medium">
+                                    The INT8 quantized core processes massive environmental telemetry entirely on local
+                                    edge hardware. By eliminating the reliance on centralized cloud servers, the Aegis
+                                    Protocol guarantees that critical municipal data remains completely isolated and
+                                    immune to external broadcast interception, even during severe grid failures.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    Cybersecurity Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Quantization</span>
+                                        <span class="text-white/90">INT8 weight compression (4x reduction)</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Power
+                                            Dynamics</span>
+                                        <span class="text-white/90">Blackout-resilient minimal CPU draw</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Network
+                                            Integrity</span>
+                                        <span class="text-white/90">100% localized; zero cloud dependency</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Algorithmic Physical Cage -->
+                    <div class="flip-card flip-top min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col justify-start absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <span
+                                    class="text-xs font-bold tracking-widest text-tech-blue uppercase font-sans mb-6">Pillar
+                                    02</span>
+                                <h3 class="font-sans font-bold text-2xl text-charcoal tracking-tight leading-snug mb-4">
+                                    Algorithmic Physical Cage</h3>
+                                <p class="font-sans text-neutral-600 leading-relaxed font-medium">
+                                    Our proprietary Partial Differential Equation (PDE) loss function acts as an
+                                    impenetrable mathematical firewall. It strictly governs neural outputs, making it
+                                    statistically impossible for the AI to be manipulated by adversarial data poisoning
+                                    or to hallucinate unphysical hydraulic behaviors.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateX(-180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    Cybersecurity Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Boundary
+                                            Logic</span>
+                                        <span class="text-white/90">Shallow-Water PDE Enforcement</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Filtration</span>
+                                        <span class="text-white/90">Hard bounds reject unphysical 10m anomalies</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Resilience</span>
+                                        <span class="text-white/90">Impervious to adversarial data poisoning</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Ingestion Shield -->
+                    <div class="flip-card flip-right min-h-[420px] gsap-reveal reveal-text group">
+                        <div
+                            class="flip-card-inner relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front showcase-glass-panel p-10 flex flex-col justify-start absolute w-full h-full [backface-visibility:hidden] rounded-[32px]">
+                                <span
+                                    class="text-xs font-bold tracking-widest text-tech-blue uppercase font-sans mb-6">Pillar
+                                    03</span>
+                                <h3 class="font-sans font-bold text-2xl text-charcoal tracking-tight leading-snug mb-4">
+                                    Telemetry Ingestion Shield</h3>
+                                <p class="font-sans text-neutral-600 leading-relaxed font-medium">
+                                    An autonomous pre-processing layer serves as the first line of defense, dynamically
+                                    quarantining corrupted sensor packets, dead zones, and NaN anomalies. This
+                                    sophisticated ingestion shield prevents contaminated data from infecting the neural
+                                    matrix, ensuring 100% operational uptime in chaotic monsoon environments.
+                                </p>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back bg-[#1A1A1A] text-white p-10 flex flex-col justify-center absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(-180deg)] rounded-[32px] border border-white/10 shadow-2xl">
+                                <h5 class="font-sans font-bold text-xl uppercase tracking-widest text-tech-blue mb-8">
+                                    Cybersecurity Specs</h5>
+                                <div class="space-y-4 font-mono text-sm">
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Validation</span>
+                                        <span class="text-white/90">Autonomous NaN/Inf matrix quarantine</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-b border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Imputation</span>
+                                        <span class="text-white/90">Rolling linear interpolation (3 timesteps)</span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pb-4 border-white/10">
+                                        <span
+                                            class="text-neutral-500 uppercase tracking-widest text-xs font-sans">Redundancy</span>
+                                        <span class="text-white/90">Dual-channel voting (15% drift alert)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section: Data Analytics & Visualizations -->
+        <section class="py-32 px-6 max-w-7xl mx-auto" id="analytics">
+            <div class="space-y-12">
+                <h2
+                    class="gsap-reveal font-sans font-bold uppercase tracking-tighter text-4xl md:text-6xl text-charcoal leading-none text-center">
+                    ANALYTICS & <span class="text-neutral-400">CONVERGENCE</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- THE PREDICTION PARADOX PANEL -->
+                    <div class="showcase-glass-panel p-6 flex flex-col h-[480px] gsap-reveal">
+                        <div class="w-full h-full flex-grow relative" style="min-height: 350px;">
+                            <div>
+                                <script>window.PlotlyConfig = { MathJaxConfig: 'local' };</script>
+                                <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js"
+                                    integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs="
+                                    crossorigin="anonymous"></script>
+                                <div id="1ef50854-bab5-4258-8f29-d611e6a27f07" class="plotly-graph-div"
+                                    style="height:100%; width:100%;"></div>
+                                <script>                window.PLOTLYENV = window.PLOTLYENV || {}; if (document.getElementById("1ef50854-bab5-4258-8f29-d611e6a27f07")) { Plotly.newPlot("1ef50854-bab5-4258-8f29-d611e6a27f07", [{ "line": { "color": "#1A1A1A", "dash": "dot", "width": 2 }, "name": "Ground Truth (Surge)", "x": { "dtype": "i4", "bdata": "0P\u002f\u002f\u002f9H\u002f\u002f\u002f\u002fS\u002f\u002f\u002f\u002f0\u002f\u002f\u002f\u002f9T\u002f\u002f\u002f\u002fV\u002f\u002f\u002f\u002f1v\u002f\u002f\u002f9f\u002f\u002f\u002f\u002fY\u002f\u002f\u002f\u002f2f\u002f\u002f\u002f9r\u002f\u002f\u002f\u002fb\u002f\u002f\u002f\u002f3P\u002f\u002f\u002f93\u002f\u002f\u002f\u002fe\u002f\u002f\u002f\u002f3\u002f\u002f\u002f\u002f+D\u002f\u002f\u002f\u002fh\u002f\u002f\u002f\u002f4v\u002f\u002f\u002f+P\u002f\u002f\u002f\u002fk\u002f\u002f\u002f\u002f5f\u002f\u002f\u002f+b\u002f\u002f\u002f\u002fn\u002f\u002f\u002f\u002f6P\u002f\u002f\u002f+n\u002f\u002f\u002f\u002fq\u002f\u002f\u002f\u002f6\u002f\u002f\u002f\u002f+z\u002f\u002f\u002f\u002ft\u002f\u002f\u002f\u002f7v\u002f\u002f\u002f+\u002f\u002f\u002f\u002f\u002fw\u002f\u002f\u002f\u002f8f\u002f\u002f\u002f\u002fL\u002f\u002f\u002f\u002fz\u002f\u002f\u002f\u002f9P\u002f\u002f\u002f\u002fX\u002f\u002f\u002f\u002f2\u002f\u002f\u002f\u002f9\u002f\u002f\u002f\u002f\u002fj\u002f\u002f\u002f\u002f5\u002f\u002f\u002f\u002f+v\u002f\u002f\u002f\u002fv\u002f\u002f\u002f\u002f8\u002f\u002f\u002f\u002f\u002ff\u002f\u002f\u002f\u002f7\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002fAAAAAA==" }, "y": { "dtype": "f8", "bdata": "pyXTmkRj+T\u002f69oEF41v5P1p+oOqoivo\u002fqJSmzbPb+z9AxgL7BR77P78jPfPQ0Ps\u002fgqtM1o\u002f7\u002fT\u002f99Fo0JQ3+P6AgQlb\u002fw\u002f0\u002fcwUZ6rg\u002f\u002fz+azTwPkxL\u002fPyBivc3Ho\u002f8\u002fynLbo\u002fZZAECOUsc9a2T\u002fPzXgeost3f8\u002fN+U1gfWBAEBqb\u002fbIumIAQAzGTpjI6wBAlwFqSQNiAECMRHTCRhQAQCXIxoT6EwFA1kW7G8AzAED4DeXf4BMAQFrlUJtYZ\u002f4\u002fS5amXBR9\u002fj8QP+k9glj+P9Edthfqovw\u002f3lQ64xIk\u002fT\u002fnnKeEYaT7P0jEKeLOL\u002fs\u002f7ply9WdE+j8gQNxk3Zr7P4IoDdAGjPk\u002f1kYAnxU4+D9Pdr2ni1D5P2CCS\u002flDXfc\u002fX1WoSulK+D+MdbCfHAz4Pw7SVoGe4\u002fo\u002f6RiFlajy\u002fj9q3rWWDE8BQDpcPT6O3gJAUAZSUbSwBEA3OuJs6a4GQO7aiw1yZQhAXCipr6\u002f8CkBFpGbP9XcNQI7rYvMRRBBAVq\u002fXFWliEUA=" }, "type": "scatter" }, { "line": { "color": "#9e9e9e", "width": 3 }, "name": "Legacy AI (Failure)", "x": { "dtype": "i4", "bdata": "0P\u002f\u002f\u002f9H\u002f\u002f\u002f\u002fS\u002f\u002f\u002f\u002f0\u002f\u002f\u002f\u002f9T\u002f\u002f\u002f\u002fV\u002f\u002f\u002f\u002f1v\u002f\u002f\u002f9f\u002f\u002f\u002f\u002fY\u002f\u002f\u002f\u002f2f\u002f\u002f\u002f9r\u002f\u002f\u002f\u002fb\u002f\u002f\u002f\u002f3P\u002f\u002f\u002f93\u002f\u002f\u002f\u002fe\u002f\u002f\u002f\u002f3\u002f\u002f\u002f\u002f+D\u002f\u002f\u002f\u002fh\u002f\u002f\u002f\u002f4v\u002f\u002f\u002f+P\u002f\u002f\u002f\u002fk\u002f\u002f\u002f\u002f5f\u002f\u002f\u002f+b\u002f\u002f\u002f\u002fn\u002f\u002f\u002f\u002f6P\u002f\u002f\u002f+n\u002f\u002f\u002f\u002fq\u002f\u002f\u002f\u002f6\u002f\u002f\u002f\u002f+z\u002f\u002f\u002f\u002ft\u002f\u002f\u002f\u002f7v\u002f\u002f\u002f+\u002f\u002f\u002f\u002f\u002fw\u002f\u002f\u002f\u002f8f\u002f\u002f\u002f\u002fL\u002f\u002f\u002f\u002fz\u002f\u002f\u002f\u002f9P\u002f\u002f\u002f\u002fX\u002f\u002f\u002f\u002f2\u002f\u002f\u002f\u002f9\u002f\u002f\u002f\u002f\u002fj\u002f\u002f\u002f\u002f5\u002f\u002f\u002f\u002f+v\u002f\u002f\u002f\u002fv\u002f\u002f\u002f\u002f8\u002f\u002f\u002f\u002f\u002ff\u002f\u002f\u002f\u002f7\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002fAAAAAA==" }, "y": { "dtype": "f8", "bdata": "pyXTmkRj+T\u002f69oEF41v5P1p+oOqoivo\u002fqJSmzbPb+z9AxgL7BR77P78jPfPQ0Ps\u002fgqtM1o\u002f7\u002fT\u002f99Fo0JQ3+P6AgQlb\u002fw\u002f0\u002fcwUZ6rg\u002f\u002fz+azTwPkxL\u002fPyBivc3Ho\u002f8\u002fynLbo\u002fZZAECOUsc9a2T\u002fPzXgeost3f8\u002fN+U1gfWBAEBqb\u002fbIumIAQAzGTpjI6wBAlwFqSQNiAECMRHTCRhQAQCXIxoT6EwFA1kW7G8AzAED4DeXf4BMAQFrlUJtYZ\u002f4\u002fS5amXBR9\u002fj8QP+k9glj+P9Edthfqovw\u002f3lQ64xIk\u002fT\u002fnnKeEYaT7P0jEKeLOL\u002fs\u002f7ply9WdE+j8gQNxk3Zr7P4IoDdAGjPk\u002f1kYAnxU4+D9Pdr2ni1D5P2CCS\u002flDXfc\u002fX1WoSulK+D97ZJ+OC\u002fv2P7CVAeAhBPg\u002f6KTVkb\u002ff+T83mXm04Qz7P4um3liscPs\u002fNZgsXMMl\u002fD97yroDRQX9P3ak4sRuLP0\u002fykm8tLDv\u002fj+YcmNjVCwAQL\u002fthJLEZQFAaQDoWMm8AUA=" }, "type": "scatter" }, { "line": { "color": "#00d2ff", "shape": "spline", "width": 3 }, "name": "Salsette Bi-LSTM", "x": { "dtype": "i4", "bdata": "0P\u002f\u002f\u002f9H\u002f\u002f\u002f\u002fS\u002f\u002f\u002f\u002f0\u002f\u002f\u002f\u002f9T\u002f\u002f\u002f\u002fV\u002f\u002f\u002f\u002f1v\u002f\u002f\u002f9f\u002f\u002f\u002f\u002fY\u002f\u002f\u002f\u002f2f\u002f\u002f\u002f9r\u002f\u002f\u002f\u002fb\u002f\u002f\u002f\u002f3P\u002f\u002f\u002f93\u002f\u002f\u002f\u002fe\u002f\u002f\u002f\u002f3\u002f\u002f\u002f\u002f+D\u002f\u002f\u002f\u002fh\u002f\u002f\u002f\u002f4v\u002f\u002f\u002f+P\u002f\u002f\u002f\u002fk\u002f\u002f\u002f\u002f5f\u002f\u002f\u002f+b\u002f\u002f\u002f\u002fn\u002f\u002f\u002f\u002f6P\u002f\u002f\u002f+n\u002f\u002f\u002f\u002fq\u002f\u002f\u002f\u002f6\u002f\u002f\u002f\u002f+z\u002f\u002f\u002f\u002ft\u002f\u002f\u002f\u002f7v\u002f\u002f\u002f+\u002f\u002f\u002f\u002f\u002fw\u002f\u002f\u002f\u002f8f\u002f\u002f\u002f\u002fL\u002f\u002f\u002f\u002fz\u002f\u002f\u002f\u002f9P\u002f\u002f\u002f\u002fX\u002f\u002f\u002f\u002f2\u002f\u002f\u002f\u002f9\u002f\u002f\u002f\u002f\u002fj\u002f\u002f\u002f\u002f5\u002f\u002f\u002f\u002f+v\u002f\u002f\u002f\u002fv\u002f\u002f\u002f\u002f8\u002f\u002f\u002f\u002f\u002ff\u002f\u002f\u002f\u002f7\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002f\u002fAAAAAA==" }, "y": { "dtype": "f8", "bdata": "0CbkcB6H9z8+ot3kFiz6P5b7vgRRYPo\u002fcYldpIE9+z9khm6\u002fdDH8PwbpcNfsYv0\u002f5+T0w7VL\u002fz\u002f10KbxFBj9P\u002f75wK7+gP0\u002fxYu2sM63\u002fz\u002fplUhJPjAAQMtzOz9MDP8\u002fwLEksyU2AEBiXtrcOgP+P8zd3FNLV\u002f4\u002fiSg0I0n\u002fAEA1e68gAzsBQEa9xqLW0QBAoQaxB40AAUBHdaNtT04AQBWYMDS5mQBAdtiNQNtrAEDl4ql4rQ4BQM\u002fobDkgdP4\u002fKiE8pH9KAECAwIHrehf7P4lI2ovm4\u002f0\u002f+GjKT4Ns\u002fT\u002fQvGDfVoX7P1F+Ys3Ol\u002fs\u002fs0YW1iwR+D9vxYkOZJb7P6J1zuUpZPo\u002fFQ2RLuCT+j8epV3wZw35P2FcD3\u002f72PY\u002fqaesgOEc+D+OO5RcObL5P1EbduDYnfs\u002f0uqEKTpV\u002fj+Xmtg6Co8BQFLCMTJjwgJAgNYHal0HBUDfziyUO9UFQJEWWGzLrgdApTP3na4TCkCxZyPgTLkLQFN7eGm6ug9ABYg7yabnEEA=" }, "type": "scatter" }], { "template": { "data": { "histogram2dcontour": [{ "type": "histogram2dcontour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "choropleth": [{ "type": "choropleth", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "histogram2d": [{ "type": "histogram2d", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "heatmap": [{ "type": "heatmap", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "contourcarpet": [{ "type": "contourcarpet", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "contour": [{ "type": "contour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "surface": [{ "type": "surface", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "fillpattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#2a3f5f" }, "error_y": { "color": "#2a3f5f" }, "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "type": "scattergl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermap": [{ "type": "scattermap", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "baxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#EBF0F8" }, "line": { "color": "white" } }, "header": { "fill": { "color": "#C8D4E3" }, "line": { "color": "white" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] }, "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": { "bgcolor": "#E5ECF6", "angularaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "radialaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "ternary": { "bgcolor": "#E5ECF6", "aaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "baxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "caxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]] }, "xaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "yaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "scene": { "xaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "yaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "zaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 } }, "shapedefaults": { "line": { "color": "#2a3f5f" } }, "annotationdefaults": { "arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1 }, "geo": { "bgcolor": "white", "landcolor": "#E5ECF6", "subunitcolor": "white", "showland": true, "showlakes": true, "lakecolor": "white" }, "title": { "x": 0.05 }, "mapbox": { "style": "light" } } }, "title": { "text": "\u003cb\u003eTHE PREDICTION PARADOX\u003c\u002fb\u003e\u003cbr\u003e\u003cspan style='font-size:11px;color:#666'\u003eMithi River Level during Black-Swan Event\u003c\u002fspan\u003e", "x": 0.5, "y": 0.96, "xanchor": "center", "yanchor": "top" }, "font": { "family": "JetBrains Mono, sans-serif", "color": "#1A1A1A", "size": 10 }, "margin": { "l": 60, "r": 40, "t": 110, "b": 100 }, "legend": { "orientation": "h", "yanchor": "top", "y": -0.25, "xanchor": "center", "x": 0.5 }, "xaxis": { "title": { "text": "Timeline (Hours to Impact)" }, "showgrid": true, "gridcolor": "rgba(0,0,0,0.05)", "zeroline": true, "zerolinecolor": "rgba(0,0,0,0.1)", "showline": false, "tick0": -48, "dtick": 12 }, "yaxis": { "title": { "text": "Water Level (Meters)" }, "showgrid": true, "gridcolor": "rgba(0,0,0,0.05)", "zeroline": true, "zerolinecolor": "rgba(0,0,0,0.1)", "showline": false, "range": [1, 4.5] }, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)" }, { "responsive": true }) };            </script>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PHYSICAL CAGE CONVERGENCE PANEL -->
+                    <div class="showcase-glass-panel p-6 flex flex-col h-[480px] gsap-reveal">
+                        <div class="w-full h-full flex-grow relative" style="min-height: 350px;">
+                            <div>
+                                <script>window.PlotlyConfig = { MathJaxConfig: 'local' };</script>
+                                <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js"
+                                    integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs="
+                                    crossorigin="anonymous"></script>
+                                <div id="cccc08d5-9f37-4378-b795-90629543c1fa" class="plotly-graph-div"
+                                    style="height:100%; width:100%;"></div>
+                                <script>                window.PLOTLYENV = window.PLOTLYENV || {}; if (document.getElementById("cccc08d5-9f37-4378-b795-90629543c1fa")) { Plotly.newPlot("cccc08d5-9f37-4378-b795-90629543c1fa", [{ "line": { "color": "#9e9e9e", "width": 2 }, "name": "Standard MSE Loss", "x": { "dtype": "i4", "bdata": "AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAAGwAAABwAAAAdAAAAHgAAAB8AAAAgAAAAIQAAACIAAAAjAAAAJAAAACUAAAAmAAAAJwAAACgAAAApAAAAKgAAACsAAAAsAAAALQAAAC4AAAAvAAAAMAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAADcAAAA4AAAAOQAAADoAAAA7AAAAPAAAAD0AAAA+AAAAPwAAAEAAAABBAAAAQgAAAEMAAABEAAAARQAAAEYAAABHAAAASAAAAEkAAABKAAAASwAAAEwAAABNAAAATgAAAE8AAABQAAAAUQAAAFIAAABTAAAAVAAAAFUAAABWAAAAVwAAAFgAAABZAAAAWgAAAFsAAABcAAAAXQAAAF4AAABfAAAAYAAAAGEAAABiAAAAYwAAAGQAAAA=" }, "y": { "dtype": "f8", "bdata": "mpmZmZmZAUA3L4Rm0BMAQIyUSQk+Zv0\u002fOK\u002f2nPvn+j8hpKU5dqb4Pz3Joi\u002fmm\u002fY\u002fFjjJnhDD9D\u002fU3SEQOhfzP\u002fcg9FUalPE\u002fQmo3k9E18D+eVZOcvPHtP1iC9+ootOs\u002fRHngfCqt6T\u002foSPOWj9fnP\u002fBpQQilLuY\u002fdRSMHyqu5D9xDeTFRVLjP2kru6J8F+I\u002fgOskMKj64D\u002fjpNVQ3fHfP5lOjHB3H94\u002f5tUQxnN53D9UpYcPmfvaP4oZQ\u002fAUotk\u002frqwRJnJp2D\u002fgRhetj07XPyhlfruYTtY\u002fLs12gP1m1T8u6OuTbJXUPxCmIQbN19M\u002f+XgAADks0z\u002f1rEvm+JDSP5\u002fLTPN+BNI\u002fbjyuO2OF0T9o8VEUYBLRP6cgHyC7U9c\u002fSODxC3Fwxj97FK5H4XqEP0SzYuZrGaI\u002fTFpIqWGhuj97FK5H4XqEP854eiqgAdE\u002fxpAv5DlO5z\u002fg7s5gzs\u002f+P2W6jiKoOuI\u002f8PvshXTT5D+Ox89La7TZP3sUrkfheoQ\u002f95csvlaa3j8CqWir2zniP0TrXDjvIARAIjK5w\u002f+\u002f2j+tT9L+w\u002fDqP\u002f\u002fZOwtKVuM\u002fexSuR+F6hD+WN1MiPuL5P1syQaYoh\u002fU\u002fqz4aIHC79j\u002fG6iiF7bK7PynIyFwXFABAexSuR+F6hD\u002fwJzWlN5f3P9NnNqKalgZAvEnlKdlv1j9OpJUdP5LoPzoBgZUlKfY\u002faBtt32TP7z9SeTVnUlrQP2J6c6XMiPo\u002fYA6wybfY6z\u002fqxtHvIc0BQOPpmY3q9fM\u002fFROej0v4CkDKDaAO9aT6P56B16lqqgFAszqnhf5wCkD3zxikcPv9P5ojDsQmGApAtQcwuP51EUAUW0wPeFgCQHfrbPZlCBBApEQzvxt+EUAUv8wnwHsUQPbVa0Bq6A5AZ7zISoy8EEA4s9FMpE8YQKUPiYf2aBlA0be20UQ7G0AOmm15SKwdQOrhZ5BRsxxAWfJlJPEPIUA5gOYMLIQiQAt4mn\u002fHXyJA6zrxeS8YKEC7GTXKlJcnQI4lECTayyZAecJgOuLGK0BUnwIWCVwrQJeAVQ\u002fbRjBAkQJ4oUrcMUB7FaCGt6sxQA==" }, "type": "scatter" }, { "line": { "color": "#e53935", "shape": "spline", "width": 3 }, "name": "PDE Constrained Loss", "x": { "dtype": "i4", "bdata": "AAAAAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAcAAAAIAAAACQAAAAoAAAALAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAAEgAAABMAAAAUAAAAFQAAABYAAAAXAAAAGAAAABkAAAAaAAAAGwAAABwAAAAdAAAAHgAAAB8AAAAgAAAAIQAAACIAAAAjAAAAJAAAACUAAAAmAAAAJwAAACgAAAApAAAAKgAAACsAAAAsAAAALQAAAC4AAAAvAAAAMAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAADcAAAA4AAAAOQAAADoAAAA7AAAAPAAAAD0AAAA+AAAAPwAAAEAAAABBAAAAQgAAAEMAAABEAAAARQAAAEYAAABHAAAASAAAAEkAAABKAAAASwAAAEwAAABNAAAATgAAAE8AAABQAAAAUQAAAFIAAABTAAAAVAAAAFUAAABWAAAAVwAAAFgAAABZAAAAWgAAAFsAAABcAAAAXQAAAF4AAABfAAAAYAAAAGEAAABiAAAAYwAAAGQAAAA=" }, "y": { "dtype": "f8", "bdata": "jmqBIdyNAEAqjPYBycT+P0sVXwPt4fw\u002fAbn4zX1Y+z9sDO8FFOj4P52w+9fbG\u002fc\u002fNzrzYXWK9T+P26SvmiT0P8pfMxfUDfM\u002fh+RyPL3z8T9DayZKfsfwP1NAnL4hw+8\u002fwL03HeA87T89O24ztErsP8bvVu5Vc+k\u002fNG2kEKe86T\u002fzqmej4OHmP\u002fnSZUWGheQ\u002f2M3BVIgR4z9ilKr+19XiP+iCEYY7PeE\u002fXYpgVa7F4D8f\u002fo5FHD\u002ffP16w37RAsdw\u002fqpGHONP42T9dGMQYCoHXP2TNTVIlXtc\u002fcm5rUiWi1z9jJ\u002fXCAIHVP5XEskKZatI\u002fwqWHpJkY0z8SyjQ81U7SP1AJQw0FZM8\u002fa0FRUyoa0D97GXQ78T3OPzpHxvGtkMk\u002fkoknXOHpyz87oB7ZbQrLPydj5qtQFMs\u002fxqkXKDvLyT8Yntdjx3DCPzVMBZubg8I\u002fqSyzuopAxT9iSTSFflXEP+d9V3Dte8M\u002fGGFi3647yz\u002fMZauTCBfCPxTFE5QS2MI\u002fB79URwa8wT8NugxrzlvAP\u002fINWAuapbo\u002f9tPoSQoavz+upektyki2P97KQQ23Hrg\u002f5yEQRAoAtj9rMvarSh24P2iH5f+jZ8E\u002fCNq28ENsqT+i1kKMKCW5P5zq5Ab+jak\u002ffGBEzroPsj9e3JXHuoi5P85m+OTGzbM\u002fAgE7iMMCqz\u002fDenzjdeGtPy1YZoGgsLU\u002f2p4izdY1rD8aY0NJopyyPz1XgVQ+a7E\u002fbvncYBYbqz96dUbt8pa7P3sWqh2+mbM\u002f2HtSn7r7lj\u002ff\u002fvzRWdiwP3M8pFYdlqg\u002fhMiEdufZsz9gKm4UqX6mP+utLSC4GK0\u002fdstkDziQsT9W7ZKMZEOzPxr+9L93GKE\u002fXWtF8Y+0qT+dp9+kSgeoP3o9ouax+qU\u002fYMoAYCJFtz\u002fEzX2cKzWwP5Dc+CJiWp4\u002fj2gZrMqosj\u002faZoK3Nb+4P4s3V342GLM\u002fI0TCARTYlz8yyNqsCmWmP3CU0iicGrQ\u002fzacT2K7goz\u002fT4BnE3JCvPwVBkAi9bbE\u002ffmnWf\u002f5XoT9ddqwvdiSqP7QTuKziEIq\u002f3NHcN5scoD8rPXhYjfKnPw==" }, "type": "scatter" }], { "template": { "data": { "histogram2dcontour": [{ "type": "histogram2dcontour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "choropleth": [{ "type": "choropleth", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "histogram2d": [{ "type": "histogram2d", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "heatmap": [{ "type": "heatmap", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "contourcarpet": [{ "type": "contourcarpet", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "contour": [{ "type": "contour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "surface": [{ "type": "surface", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "fillpattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#2a3f5f" }, "error_y": { "color": "#2a3f5f" }, "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "type": "scattergl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermap": [{ "type": "scattermap", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "baxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#EBF0F8" }, "line": { "color": "white" } }, "header": { "fill": { "color": "#C8D4E3" }, "line": { "color": "white" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] }, "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": { "bgcolor": "#E5ECF6", "angularaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "radialaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "ternary": { "bgcolor": "#E5ECF6", "aaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "baxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "caxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]] }, "xaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "yaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "scene": { "xaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "yaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "zaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 } }, "shapedefaults": { "line": { "color": "#2a3f5f" } }, "annotationdefaults": { "arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1 }, "geo": { "bgcolor": "white", "landcolor": "#E5ECF6", "subunitcolor": "white", "showland": true, "showlakes": true, "lakecolor": "white" }, "title": { "x": 0.05 }, "mapbox": { "style": "light" } } }, "title": { "text": "\u003cb\u003ePHYSICAL CAGE CONVERGENCE\u003c\u002fb\u003e\u003cbr\u003e\u003cspan style='font-size:11px;color:#666'\u003eLoss Surface Stability (Log Scale)\u003c\u002fspan\u003e", "x": 0.5, "y": 0.96, "xanchor": "center", "yanchor": "top" }, "yaxis": { "title": { "text": "Loss Value" }, "type": "log", "showgrid": true, "gridcolor": "rgba(0,0,0,0.05)", "zeroline": true, "zerolinecolor": "rgba(0,0,0,0.1)", "showline": false }, "font": { "family": "JetBrains Mono, sans-serif", "color": "#1A1A1A", "size": 10 }, "margin": { "l": 60, "r": 40, "t": 110, "b": 100 }, "legend": { "orientation": "h", "yanchor": "top", "y": -0.25, "xanchor": "center", "x": 0.5 }, "xaxis": { "title": { "text": "Training Epochs" }, "showgrid": true, "gridcolor": "rgba(0,0,0,0.05)", "zeroline": true, "zerolinecolor": "rgba(0,0,0,0.1)", "showline": false }, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)" }, { "responsive": true }) };            </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 mt-8 gap-8 max-w-4xl mx-auto">
+                    <!-- ARCHITECTURE AUDIT PANEL -->
+                    <div class="showcase-glass-panel p-6 flex flex-col h-[520px] gsap-reveal">
+                        <div class="w-full h-full flex-grow relative" style="min-height: 380px;">
+                            <div>
+                                <script>window.PlotlyConfig = { MathJaxConfig: 'local' };</script>
+                                <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.5.0.min.js"
+                                    integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs="
+                                    crossorigin="anonymous"></script>
+                                <div id="343b8fbd-5272-48f5-a317-7507f36270ef" class="plotly-graph-div"
+                                    style="height:100%; width:100%;"></div>
+                                <script>                window.PLOTLYENV = window.PLOTLYENV || {}; if (document.getElementById("343b8fbd-5272-48f5-a317-7507f36270ef")) { Plotly.newPlot("343b8fbd-5272-48f5-a317-7507f36270ef", [{ "fill": "toself", "fillcolor": "rgba(158, 158, 158, 0.2)", "line": { "color": "#9e9e9e" }, "name": "Legacy Cloud AI", "r": [35, 65, 20, 15, 0], "theta": ["Latency", "Accuracy", "Hardware Efficiency", "Poisoning Resilience", "Offline Uptime"], "type": "scatterpolar" }, { "fill": "toself", "fillcolor": "rgba(0, 210, 255, 0.2)", "line": { "color": "#00d2ff" }, "name": "Konkan-Aegis INT8 Edge", "r": [98, 94, 95, 90, 100], "theta": ["Latency", "Accuracy", "Hardware Efficiency", "Poisoning Resilience", "Offline Uptime"], "type": "scatterpolar" }], { "template": { "data": { "histogram2dcontour": [{ "type": "histogram2dcontour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "choropleth": [{ "type": "choropleth", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "histogram2d": [{ "type": "histogram2d", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "heatmap": [{ "type": "heatmap", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "contourcarpet": [{ "type": "contourcarpet", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "contour": [{ "type": "contour", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "surface": [{ "type": "surface", "colorbar": { "outlinewidth": 0, "ticks": "" }, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "fillpattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#2a3f5f" }, "error_y": { "color": "#2a3f5f" }, "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "type": "scattergl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermap": [{ "type": "scattermap", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "baxis": { "endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#EBF0F8" }, "line": { "color": "white" } }, "header": { "fill": { "color": "#C8D4E3" }, "line": { "color": "white" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "#E5ECF6", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] }, "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": { "bgcolor": "#E5ECF6", "angularaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "radialaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "ternary": { "bgcolor": "#E5ECF6", "aaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "baxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" }, "caxis": { "gridcolor": "white", "linecolor": "white", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]] }, "xaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "yaxis": { "gridcolor": "white", "linecolor": "white", "ticks": "", "title": { "standoff": 15 }, "zerolinecolor": "white", "automargin": true, "zerolinewidth": 2 }, "scene": { "xaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "yaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 }, "zaxis": { "backgroundcolor": "#E5ECF6", "gridcolor": "white", "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white", "gridwidth": 2 } }, "shapedefaults": { "line": { "color": "#2a3f5f" } }, "annotationdefaults": { "arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1 }, "geo": { "bgcolor": "white", "landcolor": "#E5ECF6", "subunitcolor": "white", "showland": true, "showlakes": true, "lakecolor": "white" }, "title": { "x": 0.05 }, "mapbox": { "style": "light" } } }, "title": { "text": "\u003cb\u003eARCHITECTURE AUDIT\u003c\u002fb\u003e\u003cbr\u003e\u003cspan style='font-size:11px;color:#666'\u003eEdge vs Cloud Redundancy Matrices\u003c\u002fspan\u003e", "x": 0.5, "y": 0.96, "xanchor": "center", "yanchor": "top" }, "polar": { "radialaxis": { "visible": true, "range": [0, 100], "showline": false, "gridcolor": "rgba(0,0,0,0.05)", "tickcolor": "rgba(0,0,0,0.05)" }, "angularaxis": { "gridcolor": "rgba(0,0,0,0.05)", "linecolor": "rgba(0,0,0,0.05)" }, "bgcolor": "rgba(0,0,0,0)" }, "font": { "family": "JetBrains Mono, sans-serif", "color": "#1A1A1A", "size": 10 }, "margin": { "l": 100, "r": 100, "t": 120, "b": 100 }, "legend": { "orientation": "h", "yanchor": "top", "y": -0.2, "xanchor": "center", "x": 0.5 }, "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgba(0,0,0,0)" }, { "responsive": true }) };            </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTELLIGENCE VAULT SECTION -->
+
+        <!-- INTELLIGENCE VAULT SECTION -->
+
+        <section class="relative z-10 py-32 px-6 max-w-7xl mx-auto scroll-container" id="vault">
+            <div class="mb-16 text-center gsap-reveal">
+                <h2 class="text-xs font-mono tracking-[0.3em] text-gray-500 mb-3 xray-text">CLASSIFIED REPOSITORY</h2>
+                <h1 class="text-4xl md:text-5xl font-sans tracking-widest xray-text uppercase">Intelligence Vault</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: LLM Audit -->
+                <div onclick="openDocumentModal('assets/konkan_aegis_llm_audit.md')"
+                    class="showcase-glass-panel p-8 flex flex-col justify-between h-64 cursor-pointer group gsap-reveal">
+                    <div>
+                        <p
+                            class="text-[10px] font-mono tracking-widest text-gray-500 mb-2 group-hover:text-brand transition-colors">
+                            DOC // 001</p>
+                        <h3 class="text-xl font-sans tracking-widest uppercase text-charcoal">Red Team Security Audit
+                        </h3>
+                    </div>
+                    <div
+                        class="flex items-center text-xs font-mono tracking-wider text-gray-600 group-hover:text-charcoal transition-colors">
+                        <span>[ OPEN FILE ]</span>
+                        <span
+                            class="ml-2 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1">↗</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Architecture -->
+                <div onclick="openDocumentModal('assets/PROJECT_ARCHITECTURE.md')"
+                    class="showcase-glass-panel p-8 flex flex-col justify-between h-64 cursor-pointer group gsap-reveal">
+                    <div>
+                        <p
+                            class="text-[10px] font-mono tracking-widest text-gray-500 mb-2 group-hover:text-tech-blue transition-colors">
+                            DOC // 002</p>
+                        <h3 class="text-xl font-sans tracking-widest uppercase text-charcoal">System Architecture
+                            Blueprint</h3>
+                    </div>
+                    <div
+                        class="flex items-center text-xs font-mono tracking-wider text-gray-600 group-hover:text-charcoal transition-colors">
+                        <span>[ OPEN FILE ]</span>
+                        <span
+                            class="ml-2 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1">↗</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Neural Brain Topology -->
+                <div onclick="openJsonModal('assets/v7_best_brain_topology.json')"
+                    class="showcase-glass-panel p-8 flex flex-col justify-between h-64 cursor-pointer group gsap-reveal">
+                    <div>
+                        <p
+                            class="text-[10px] font-mono tracking-widest text-gray-500 mb-2 group-hover:text-tech-blue transition-colors">
+                            ASSET // 003</p>
+                        <h3 class="text-xl font-sans tracking-widest uppercase text-charcoal">Neural Brain Topology</h3>
+                    </div>
+                    <div
+                        class="flex items-center text-xs font-mono tracking-wider text-gray-600 group-hover:text-charcoal transition-colors">
+                        <span>[ VIEW TOPOLOGY ]</span>
+                        <span
+                            class="ml-2 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1">↗</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Whitepaper -->
+                <a href="https://drive.google.com/file/d/1ZG8oZtG47afL6eEouzIa4x1qjCc48mIB/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer"
+                    class="showcase-glass-panel p-8 flex flex-col justify-between h-64 cursor-pointer group gsap-reveal block">
+                    <div>
+                        <p
+                            class="text-[10px] font-mono tracking-widest text-gray-500 mb-2 group-hover:text-brand transition-colors">
+                            DOC // 004</p>
+                        <h3 class="text-xl font-sans tracking-widest uppercase text-charcoal">Research Whitepaper</h3>
+                    </div>
+                    <div
+                        class="flex items-center text-xs font-mono tracking-wider text-gray-600 group-hover:text-charcoal transition-colors">
+                        <span>[ EXTERNAL LINK ]</span>
+                        <span
+                            class="ml-2 transition-transform group-hover:translate-x-2 group-hover:-translate-y-1">↗</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section: Human Impact / Manifesto -->
+        <section class="py-24 px-6 max-w-5xl mx-auto text-center relative z-10" id="manifesto">
+            <div class="oil-water-shield gsap-reveal reveal-text space-y-12">
+                <p class="font-mono text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                    // OUR PROBLEMS ; OUR SOLUTIONS!
+                </p>
+                <blockquote
+                    class="font-sans text-3xl md:text-5xl font-light tracking-tight leading-tight max-w-4xl mx-auto text-charcoal">
+                    We cannot negotiate with the monsoon, and <span class="font-serif italic text-neutral-500">we cannot
+                        out-build</span> the rising tides. But with edge-compute intelligence, <span
+                        class="font-semibold text-neutral-900">we can out-predict them.</span>
+                </blockquote>
+                <p
+                    class="font-serif italic text-lg md:text-2xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mt-8">
+                    Project Salsette isn't just about saving data; it's about buying cities the one resource they cannot
+                    manufacture during a crisis: <span
+                        class="font-sans font-bold tracking-widest uppercase text-xs border border-charcoal/30 px-3 py-1 rounded-full ml-2 text-charcoal">Time</span>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section: Strategic Deployment & Alliances -->
+        <section class="py-40 px-6 max-w-4xl mx-auto text-center" id="partnerships">
+            <div class="gsap-reveal reveal-text flex flex-col items-center justify-center space-y-10">
+                <span
+                    class="font-mono text-xs font-bold bg-neutral-100 text-neutral-600 px-4 py-2 rounded-full uppercase tracking-[0.2em] animate-pulse">
+                    [ DEPLOYMENT STATUS: PRE-LAUNCH V7 ]
+                </span>
+
+                <h2
+                    class="font-sans font-bold uppercase tracking-[0.2em] text-4xl md:text-5xl text-charcoal leading-tight">
+                    STRATEGIC DEPLOYMENT <br class="md:hidden" />& ALLIANCES
+                </h2>
+
+                <p class="font-sans text-lg md:text-xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+                    The Konkan-Aegis Protocol is entering its final edge-hardware deployment phase. We are currently
+                    opening dialogue with municipal infrastructure bodies, edge-compute hardware manufacturers, and
+                    humanitarian tech funds for strategic integration.
+                </p>
+
+                <div class="pt-8">
+                    <a href="mailto:abdullah.ashraf55780@gmail.com?subject=Project%20Salsette%20Strategic%20Partnership"
+                        class="inline-block bg-[#1A1A1A] text-white font-sans text-sm font-bold uppercase tracking-widest px-10 py-5 hover:-translate-y-1 transition-transform duration-300 shadow-xl">
+                        INITIALIZE PARTNERSHIP DIALOGUE ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Dynamic Launch Radio Banner -->
+        <div class="launch-ticker-container mt-12 mb-4 flex justify-center items-center">
+            <div class="launch-ticker-item flex items-center justify-center space-x-8">
+                <span
+                    class="font-mono text-[9px] tracking-[0.25em] text-neutral-500 uppercase opacity-80 md:block hidden select-none">//
+                    STATUS: STANDBY</span>
+                <span class="launch-pulse-dot"></span>
+                <span>WE ARE LAUNCHING SOON</span>
+                <span class="launch-pulse-dot"></span>
+                <span
+                    class="font-mono text-[9px] tracking-[0.25em] text-neutral-500 uppercase opacity-80 md:block hidden select-none">FREQ:
+                    108.4 MHZ //</span>
+            </div>
+        </div>
+
+        <!-- Section: Secondary Init Ticker -->
+        <div class="w-full overflow-hidden border-y border-neutral-200/20 py-3 bg-[#0a0a0c]/5 backdrop-blur-sm relative z-10 flex items-center justify-center mb-8">
+            <div class="flex items-center space-x-4 animate-pulse-slow">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.7)] animate-pulse"></span>
+                <span class="font-mono text-[10px] tracking-[0.3em] text-yellow-600 uppercase font-semibold">
+                    [ MAIN INTERFACE AND PREDICTIVE DASHBOARD: INITIALIZATION PENDING ]
+                </span>
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(234,179,8,0.7)] animate-pulse"></span>
+            </div>
+        </div>
+
+        <!-- Section: Feedback Terminal -->
+        <section class="py-16 px-6 max-w-xl mx-auto relative z-10" id="feedback">
+            <div class="showcase-glass-panel p-8 md:p-12 rounded-[32px] space-y-8 bg-white/70">
+                <div class="space-y-2 text-center">
+                    <p class="font-mono text-[10px] tracking-[0.35em] text-neutral-500 uppercase">
+                        // SECURE TELEMETRY UPLINK
+                    </p>
+                    <h3 class="font-sans font-bold uppercase tracking-tight text-2xl text-charcoal">
+                        FEEDBACK TERMINAL
+                    </h3>
+                </div>
+
+                <form action="https://formspree.io/f/xnjralqk" method="POST" class="space-y-6">
+                    <!-- Identification Input -->
+                    <div class="space-y-2">
+                        <label class="block font-sans text-xs font-bold uppercase tracking-widest text-neutral-500">
+                            IDENTIFICATION
+                        </label>
+                        <input type="text" name="name" placeholder="[ ENTER FULL NAME ]" 
+                            class="w-full bg-[#0a0a0c] border border-white/10 rounded-2xl px-5 py-4 text-white font-mono text-sm tracking-wide focus:outline-none focus:border-neutral-400 focus:ring-0 placeholder:text-neutral-600 transition-colors" required>
+                    </div>
+
+                    <!-- Return Uplink Input -->
+                    <div class="space-y-2">
+                        <label class="block font-sans text-xs font-bold uppercase tracking-widest text-neutral-500">
+                            RETURN UPLINK
+                        </label>
+                        <input type="email" name="email" placeholder="[ ENTER EMAIL ADDRESS ]" 
+                            class="w-full bg-[#0a0a0c] border border-white/10 rounded-2xl px-5 py-4 text-white font-mono text-sm tracking-wide focus:outline-none focus:border-neutral-400 focus:ring-0 placeholder:text-neutral-600 transition-colors" required>
+                    </div>
+
+                    <!-- Telemetry Input -->
+                    <div class="space-y-2">
+                        <label class="block font-sans text-xs font-bold uppercase tracking-widest text-neutral-500">
+                            TELEMETRY / FEEDBACK
+                        </label>
+                        <textarea name="message" rows="4" placeholder="[ ENTER TRANSMISSION DATA ]" 
+                            class="w-full bg-[#0a0a0c] border border-white/10 rounded-2xl px-5 py-4 text-white font-mono text-sm tracking-wide focus:outline-none focus:border-neutral-400 focus:ring-0 placeholder:text-neutral-600 transition-colors resize-none" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="pt-4">
+                        <button type="submit" 
+                            class="w-full bg-[#1A1A1A] hover:bg-[#2A2A2A] text-white font-sans text-sm font-bold uppercase tracking-widest py-5 rounded-2xl transition duration-300 transform hover:scale-[1.01] hover:shadow-xl flex items-center justify-center gap-2">
+                            TRANSMIT DATA ↗
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer
+            class="py-12 border-t border-neutral-200 text-xs font-semibold text-neutral-400 tracking-[0.2em] text-center gsap-reveal">
+            <p>AEGIS SYSTEM ONLINE. STRICT CONTAINMENT PROTOCOL ACTIVE.</p>
+        </footer>
+    </div>
+
+    <!-- SECURE TERMINAL MODAL -->
+    <div id="document-modal"
+        class="fixed inset-0 z-50 opacity-0 pointer-events-none backdrop-blur-xl bg-white/90 flex justify-center items-start overflow-y-auto">
+        <div class="relative w-full max-w-4xl min-h-screen p-8 md:p-16">
+
+            <!-- Modal Header / Close Button -->
+            <div
+                class="flex justify-between items-center mb-12 sticky top-0 bg-white/90 backdrop-blur-md py-4 border-b border-gray-200 z-10">
+                <span class="text-xs font-mono tracking-widest text-gray-500 uppercase">SECURE TERMINAL ACTIVE</span>
+                <button onclick="closeDocumentModal()"
+                    class="text-charcoal font-mono tracking-widest hover:text-brand transition-colors text-sm">
+                    [ CLOSE X ]
+                </button>
+            </div>
+
+            <!-- Content Container -->
+            <div id="markdown-content" class="markdown-body pb-20">
+                <!-- Parsed Markdown Injected Here -->
+            </div>
+
+        </div>
+        <!-- Offline Fallback Assets (For file:// protocol CORS bypass) -->
+        <script id="asset-v7-best-brain-topology" type="application/json">
+{
+    "module": null,
+    "class_name": "SentinelPhysicsModel",
+    "config": {
+        "name": "sentinel_physics_model",
+        "trainable": true,
+        "dtype": {
+            "module": "keras",
+            "class_name": "DTypePolicy",
+            "config": {
+                "name": "float32"
+            },
+            "registered_name": null
+        }
+    },
+    "registered_name": "Custom>SentinelPhysicsModel",
+    "build_config": {
+        "input_shape": [
+            null,
+            24,
+            8
+        ]
+    },
+    "compile_config": {
+        "optimizer": {
+            "module": "keras.optimizers",
+            "class_name": "AdamW",
+            "config": {
+                "name": "adamw",
+                "learning_rate": 1.5625000742147677e-05,
+                "weight_decay": 0.004,
+                "clipnorm": 1.0,
+                "global_clipnorm": null,
+                "clipvalue": null,
+                "use_ema": false,
+                "ema_momentum": 0.99,
+                "ema_overwrite_frequency": null,
+                "loss_scale_factor": null,
+                "gradient_accumulation_steps": null,
+                "beta_1": 0.9,
+                "beta_2": 0.999,
+                "epsilon": 1e-07,
+                "amsgrad": false
+            },
+            "registered_name": null
+        },
+        "loss": null,
+        "loss_weights": null,
+        "metrics": null,
+        "weighted_metrics": null,
+        "run_eagerly": false,
+        "steps_per_execution": 1,
+        "jit_compile": true
+    }
+}
+    </script>
+
+        <script id="asset-konkan-aegis-llm-audit" type="text/markdown">
+# KONKAN-AEGIS PROTOCOL: AUTONOMOUS LLM AUDIT
+**SESSION ID:** `LLM-AUDIT-2026-05-16T075608Z`
+**TIMESTAMP:** `2026-05-16T07:56:08Z`
+**TARGET ASSET:** `v7_best_brain.keras`
+**INSPECTOR:** `Autonomous Overseer (gemini-2.5-flash)`
+
+---
+
+# Red Team Security and Structural Audit Dossier
+## Project: Salsette (The Konkan-Aegis Protocol)
+### Model Under Audit: `SentinelPhysicsModel` (`v7_best_brain.keras`)
+
+---
+
+**Report Date:** 16 May 2026
+**Auditor:** Lead Systems Architect & Senior Humanitarian Software Engineer
+
+---
+
+### Executive Summary
+
+This dossier presents a Red Team audit of the `SentinelPhysicsModel` (`v7_best_brain.keras`), a neural network framework designed to manage and resolve the Hydraulic Lock drainage paradox in Mumbai. The audit focuses on structural integrity, edge deployment viability, and resilience against sensor data corruption, critical for its operation during extreme monsoon/tidal synchronization events and potential power grid blackouts.
+
+---
+
+### 1. STRUCTURAL INTEGRITY & BOTTLENECKS
+
+The `SentinelPhysicsModel` is configured with an `input_shape` of `[null, 24, 8]`, indicating a batch-flexible input of 24 time steps, each containing 8 distinct features/sensor readings. The model utilizes `float32` precision and is configured for `jit_compile: true` with an `AdamW` optimizer.
+
+#### 1.1 Input Shape Implications
+*   **`[null, 24, 8]` Interpretation:**
+    *   `null`: Represents a flexible batch size, allowing for varied inference loads. While beneficial for development and training, for critical real-time deployment, a fixed or constrained batch size might be more predictable in terms of latency and resource consumption.
+    *   `24`: Denotes the sequence length or historical window of data points. This implies the model processes temporal dependencies over 24 discrete time intervals. The choice of 24 must be rigorously validated against the characteristic timescales of hydraulic lock formation and resolution.
+    *   `8`: Corresponds to 8 distinct live incoming sensor streams. These are presumed to be critical parameters influencing the hydraulic system state (e.g., water levels, flow rates, pump statuses, tidal data).
+
+#### 1.2 Structural Bottlenecks & Performance
+*   **Data Ingress:** The primary bottleneck will likely be the reliable and low-latency ingestion of 8 sensor streams, sampled consistently to form the 24-step sequence. Any delay or jitter in sensor data acquisition will directly impact the model's ability to provide timely predictions.
+*   **Computational Load:** While `jit_compile: true` is a significant optimization for execution speed, the actual computational complexity depends on the internal layers of the `SentinelPhysicsModel` (not detailed in the payload). For a sequence length of 24, recurrent or attention-based layers could introduce substantial computational overhead, especially with larger batch sizes.
+*   **Memory Footprint:** Processing `float32` data for `[null, 24, 8]` inputs, combined with the model's internal weights and activations, will dictate memory requirements. For a batch size of 1 (real-time inference), this is manageable. However, if larger batches are used for efficiency, memory consumption scales linearly.
+*   **Optimizer Configuration:** The `AdamW` optimizer with `learning_rate: 1.5625e-05` and `weight_decay: 0.004` suggests a fine-tuned training regimen. While relevant for training stability, it has no direct bearing on inference-time structural integrity beyond ensuring a well-converged model.
+
+#### 1.3 Recommendations
+*   **Fixed Batch Size for Inference:** Consider enforcing a batch size of 1 for real-time edge inference to ensure predictable latency and resource usage.
+*   **Data Pipeline Optimization:** Implement a dedicated, high-throughput data pipeline with robust buffering and timestamping to ensure the `[24, 8]` input tensor is consistently available and correctly ordered.
+*   **Internal Architecture Review:** A deeper audit of the model's internal layer structure (e.g., number of layers, neuron counts, type of recurrent units) is required to fully assess computational and memory demands.
+
+---
+
+### 2. EDGE DEPLOYMENT VIABILITY
+
+Deployment on low-power edge machines, particularly during a city-wide power grid blackout, presents significant challenges for the `SentinelPhysicsModel` running `float32` logic.
+
+#### 2.1 Memory Limits
+*   **`float32` Precision:** While standard for training, `float32` consumes 4 bytes per parameter/activation. For edge devices with limited RAM (e.g., 128MB - 1GB), a complex model with millions of parameters can quickly exceed available memory.
+*   **Model Size:** The total number of parameters in `v7_best_brain.keras` is unknown from the provided payload. This is the primary determinant of memory footprint.
+*   **Activation Memory:** Intermediate activations during inference also consume memory, which can be substantial for deep networks or large sequence lengths.
+
+#### 2.2 CPU Draw & Power Consumption
+*   **`float32` Operations:** `float32` arithmetic requires more complex circuitry and consumes more power than lower-precision alternatives (e.g., `float16`, `int8`).
+*   **`jit_compile: true`:** This is a positive for CPU efficiency, as it compiles the Keras model into optimized TensorFlow Graph operations, reducing Python overhead and potentially leveraging hardware-specific instructions. However, it does not fundamentally alter the computational cost of the underlying `float32` operations.
+*   **Blackout Scenario:** During a blackout, edge devices would rely on battery power. Minimizing CPU draw is paramount to extend operational time. A sustained high CPU load will rapidly deplete battery reserves, compromising the system's ability to manage critical drainage operations.
+
+#### 2.3 Recommendations for Edge Viability
+*   **Model Quantization:** Aggressively explore post-training quantization to `float16` or `int8`. This can significantly reduce model size (up to 4x for `int8`) and computational requirements, leading to lower power consumption. A thorough evaluation of accuracy degradation post-quantization is essential.
+*   **Model Pruning/Sparsity:** Investigate techniques to reduce the number of parameters or connections in the model without significant performance loss.
+*   **Hardware Acceleration:** Prioritize edge hardware with dedicated Neural Processing Units (NPUs) or DSPs capable of accelerating `float16` or `int8` operations efficiently.
+*   **Power Management:** Implement dynamic frequency scaling and power-saving modes for the edge device.
+*   **Battery Backup & Redundancy:** Mandate robust, long-duration battery backup systems for all edge nodes, potentially with solar charging capabilities for extended resilience.
+
+---
+
+### 3. SENSOR CORRUPTION RISKS
+
+The `input_shape` of `[null, 24, 8]` means the model is directly exposed to 8 live incoming sensor streams. The integrity of these streams is paramount. If 1 or more of these 8 streams report corrupted data or NaNs, the structural vulnerabilities are significant.
+
+#### 3.1 Impact of Corrupted Data / NaNs
+*   **NaN Propagation:** Neural networks, especially those using `float32` arithmetic, are highly susceptible to NaN propagation. If a single NaN enters the network, it will typically propagate through subsequent layers, resulting in NaN outputs. This renders the model's predictions useless and can lead to system paralysis or erroneous actions.
+*   **Erroneous Predictions:** Corrupted data (e.g., sensor drift, stuck values, sudden unphysical spikes/drops) can lead the model to make incorrect predictions. For a system managing hydraulic lock, this could mean:
+    *   **Delayed Response:** Failing to detect an impending lock, leading to catastrophic flooding.
+    *   **Premature/Unnecessary Action:** Triggering drainage operations when not required, wasting resources or causing unintended side effects.
+    *   **Oscillation/Instability:** Model outputs fluctuating wildly due to noisy inputs, leading to unstable system control.
+*   **Feature Importance:** If a critical sensor (e.g., primary water level) is corrupted, the model's ability to accurately assess the situation is severely compromised, regardless of the other 7 streams.
+
+#### 3.2 Structural Vulnerabilities & Mitigation
+The provided JSON payload describes the model's configuration but does not detail any inherent input validation or error handling mechanisms. This represents a critical structural vulnerability.
+
+*   **Vulnerability:** Direct ingestion of raw sensor data without a robust pre-processing and validation layer.
+
+*   **Mitigation Strategies (Essential Structural Additions):**
+    1.  **Input Validation & Sanitization Layer (Mandatory):**
+        *   **NaN/Inf Detection & Handling:** Implement a dedicated pre-processing module to detect NaNs and infinite values. Strategies include:
+            **Imputation:** Automatically substitute missing data points or NaNs using a rolling linear interpolation or historical safe-state baseline values from the previous 3 timesteps to prevent model blinding.
+            **Hard Boundaries:** Enforce strict mathematical constraints to reject unphysical sensor readings (e.g., water levels indicating negative values or sudden impossible 10-meter spikes within a 1-second interval).
+
+    2.  **Sensor Redundancy Arrays:**
+        * Implement a dual-channel voting system where secondary or tertiary edge sensors cross-verify water level data. If the delta between the primary and secondary sensor exceeds 15%, flag an immediate sensor drift alert.
+
+---
+
+## 4. FINAL VERDICT & SIGN-OFF
+
+The `SentinelPhysicsModel` exhibits robust algorithmic optimization features via XLA graph compilation. However, its current reliance on raw, unvalidated `float32` input matrices leaves it vulnerable to data corruption and edge device power depletion under crisis scenarios.
+
+### REQUIRED ENHANCEMENTS FOR FIELD MOBILIZATION:
+1.  **Deploy an Ingestion Shield:** A pre-processing validation class (such as the `AegisSensorShield`) must be physically bound to the FastAPI ingestion endpoint to filter out `NaN` variables before they reach the model.
+2.  **Quantize the Core:** Compress the weights from `float32` down to `int8` to guarantee system longevity on local battery backup networks.
+
+**TACTICAL COMPLIANCE STATUS:** APPROVED WITH SYSTEM RESERVATIONS
+*Pending the implementation of the data sanitization layer.*
+
+---
+*SYS.AUDIT.END // AES-256 ENCRYPTED TRACE LOG SECURED.*
+    </script>
+
+        <script id="asset-project-architecture" type="text/markdown">
+# Sentinel V7 Mumbai Coastal Defense System
+## Project Architecture & Deep Dive Analysis
+
+This document provides a comprehensive, deep-dive analysis of the **Sentinel V7 (HUFP_mumbai)** project. It details the module architecture, data pipelines, neural network configurations, and the "AEGIS Auditor" system designed to forecast and audit hydraulic locks and flood depths in Mumbai.
+
+---
+
+## 1. System Overview
+
+Sentinel V7 is a high-security, physics-informed flood prediction and citizen telemetry system tailored for the complex topography and coastal dynamics of Mumbai. It fuses large-scale static geospatial grids (elevation, landcover, slope) with dynamic meteorological (Open-Meteo) and oceanic (Tidal harmonic) data. 
+
+At its core, it employs a massive **>10-Million parameter Physics-Informed Neural Network (PINN)** wrapped in an **AEGIS Auditor architecture** that validates the neural predictions against hard physics (mass balance, hydraulic lock laws) to prevent hallucinations.
+
+---
+
+## 2. Directory Structure & Module Breakdown
+
+The project is structured into distinct pipelines spanning data engineering, neural networks, auditing, secure APIs, and frontend interfaces:
+
+```text
+HUFP_mumbai/
+├── 01 to 07 Scripts   # Big Data Extraction & Fusion Pipeline
+├── aegis_auditor/     # The "Judge/Jury" Epistemic Humility Validation Engine
+├── api/               # FastAPI Backend with Secure Neural Ignition
+├── data/              # Raw & Processed Datasets (Weather, Tides, Parquet)
+├── deployment/        # Docker and CI/CD pipelines
+├── iot/               # Edge compute security (C++ & Nginx)
+├── src/               # PINN Core & Training Logic
+└── web/               # Tactical HUDs (Citizen & Expert)
+```
+
+---
+
+## 3. Data Engineering Pipeline (Root Scripts)
+
+The root directory contains a 7-step data ingestion and fusion pipeline designed to process petabytes of raw data using chunked memory management.
+
+- **`01_init_mumbai_grid.py` to `06_build_master_grid.py`**: These scripts extract the static 100m topological grid of Mumbai (via `mumbai_100m_grid.geojson`), fetch historical weather data, compute tide harmonics, and align the spatial targets.
+- **`07_final_fusion.py`**: The Master Fusion Engine. It takes the 216,284-cell static grid and streams hourly weather and tide data to disk using `pyarrow` and Parquet. It calculates topographic slope, aligns timestamps, and writes out compressed Parquet files year-by-year, strictly limiting RAM usage to prevent out-of-memory crashes.
+- **`08_live_telemetry_daemon.py`**: The Zero-Latency Live Ingestion Daemon. An asynchronous `aiohttp` script that continuously polls Open-Meteo precipitation and marine APIs every 5 minutes. It fuses real-time data and appends it to a chunked `live_telemetry.parquet` dataset without blocking the main event loops.
+
+---
+
+## 4. The `src` Module: Neural Core (PINN)
+
+The `src` directory houses the actual AI models, focused on a Physics-Informed approach.
+
+### `src/models/bi_lstm_mumbai_v1.py`
+This defines the `SentinelMumbaiPINN`—the engine of Sentinel V7.
+- **Architecture**: A Deep Bi-Directional LSTM (6 layers, 512 hidden units per direction) paired with a Self-Attention Head and a fully connected decoder. It boasts **>10,000,000 active parameters**.
+- **Physics-Informed Loss Function (`PINN_Loss`)**: The loss function combines a data-driven Log-Cosh loss with a massive physics penalty. If the model predicts no flood while the tidal height and rainfall exceed a "hydraulic lock" threshold, it applies a massive ReLU penalty. This forces the model to respect the law of mass conservation.
+
+### Training Scripts (`train_mumbai_pinn.py`, `hybrid_train_pinn.py`)
+These scripts train the deep Bi-LSTM against the Parquet dataset and synthesize scenarios using `hydraulic_lock_generator.py` to ensure the neural net is robust to anomalous "black swan" flood events.
+
+---
+
+## 5. The `aegis_auditor` Module: Judge & Jury Overseer
+
+Because deep neural networks can hallucinate, Sentinel V7 employs an **AEGIS (Anti-Gravity Environment for Global Infrastructure Sentinel)** Auditor. This is a multi-agent validation layer.
+
+### `judge_overseer.py` (The Synthesis Layer)
+The Judge orchestrates the execution of 6 independent suites. It dynamically allocates compute time based on storm severity (e.g., allocating 5.0 seconds to Predictor/Historian during high-severity storms). It calculates the final **`V_audit`** formulation: checking the neural output against `L_Physics.validate_mass_balance()`.
+
+### The 6 Independent Suites (`suites/`)
+1. **S1 (Interrogator)**: Checks for logical fallacies (e.g., if the PINN says "safe" but rainfall is >100mm and tide is >4.5m, it raises a logic fault).
+2. **S2 (Watchdog)**: Monitors execution latency and computational bounds.
+3. **S3 (Analyst)**: Performs statistical analysis on the input vectors.
+4. **S4 (Predictor)**: Evaluates transit gridlock and muck-factor calculus using an independent heuristic.
+5. **S5 (Historian)**: Performs temporal anchoring, checking current metrics against the 2005 Mumbai flood profile. Raises `HistoricalIgnorance` if the threat is undervalued.
+6. **S6 (Telemetry)**: Validates incoming IoT and Citizen pin data streams.
+
+---
+
+## 6. The `api` Module: Secure Backend
+
+Built with FastAPI, the `api/main.py` is the nervous system connecting the model to the outside world.
+
+- **Secure Neural Ignition (Lifespan Phase)**: The model weights (`sentinel_mumbai_v1_cloud.pt`) are stored encrypted. During server startup, the system fetches the Data Encryption Key (DEK) via `vault_manager.py`, decrypts the model into memory via AES-GCM, seats the neural core, and then cryptographically shreds the DEK from RAM using `memory_utils.secure_zero()`.
+- **Dual-Framework "Shadow Run" Backend**: Alongside the PyTorch core, the lifespan event now loads a compiled Keras model (`v7_latest_brain.keras`). An internal `asyncio` background task tails the `live_telemetry.parquet` file every 5 minutes, runs a Keras inference pass to predict hydraulic locks, silently logs the matrix to an `aegis_audit.db` SQLite database, and broadcasts the probability to the frontend via a `/ws/telemetry` WebSocket endpoint.
+- **Inference Endpoints**: `/api/v1/inference` receives telemetry vectors, passes them through the `sentinel_core` tensor, and returns hydraulic lock probabilities and flood depths.
+- **Session & Security**: Features JWT-based session auth (`/api/v1/auth/session`) and payload integrity middleware (`security_middleware.py`) to prevent replay attacks and tampering.
+- **Emergency Routes**: Endpoints for Citizen Pins and Emergency Beacons to crowd-source ground-truth data, directly interfacing with `coastal_db.py`.
+
+---
+
+## 7. The `web` Module: Tactical HUD Interfaces
+
+The frontend is divided into two distinct Glassmorphic/Cybernetic UIs:
+- **`web/citizen/`**: Designed for public use. Features a 3D-interactive, draggable "Survival Suite" cube (`SurvivalSuite.jsx` React component that monitors real-time WebSocket telemetry and triggers CSS emergency states), cinematic cosmic descent intro (`intro.html`), and live dashboards to warn citizens of hydraulic locks.
+- **`web/admin/` (Expert Console)**: A hyper-detailed dashboard designed for hydrologists and civil engineers, displaying bayesian uncertainty, basin yield, aleatoric noise, and SAR backscatter histories (`expert.html`).
+
+---
+
+## 8. Deployment and Edge (`deployment/`, `iot/`)
+
+- **Dockerization**: The ecosystem is containerized via `docker-compose.yml`.
+- **Edge Security**: `iot/edge_security.cpp` executes a robust `EVP_aes_256_gcm` OpenSSL algorithm. It encrypts physical JSON telemetry from hardware sensors with a hardcoded DEK, extracts the mathematically binding Authentication Tag natively, and packages the IV, Ciphertext, and Auth Tag into a Base64 string to definitively prevent "Ghost Rain" injection attacks. 
+- **Nginx**: A robust `nginx.conf` acts as the reverse proxy, shielding the Uvicorn workers and managing secure SSL/TLS termination.
+
+---
+**Summary Statement**: Sentinel V7 is a production-grade, highly secure, physics-constrained AI ecosystem. It bridges the gap between massive data engineering, deep learning, and epistemic auditing to provide an ultra-reliable, tamper-proof flood management platform.
+    </script>
+
+        <!-- External Libraries (CDN ONLY) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <!-- Logic Engine -->
+        <script src="app.js"></script>
+</body>
+
+</html>
